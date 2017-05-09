@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>SadFunction</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="normalize.css" type="text/css">
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Viewport stuff -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+  <nav id="sad-nav">
+    <div id="sad-menu">
+      <div id="sad-brand"><a href="#"><h1>:&#123;</h1></a></div>
+      <ul id="sad-responsive-nav">
+        <a href="#"><li class="selected">Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Blog</li></a>
+        <a href="#"><li>Podcasts</li></a>
+        <a href="#"><li>Articles</li></a>
+      </ul>
+      <a href="javascript:void(0);" id="sad-burger-menu" onclick="expandNav()"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="sad-hero">
+    Welcome to SadFunction.
+    <p>We're here to play songs about death and make you feel sad and stuff.</p>
+  </div>
+  <div class="sad-container">
+    <div class="sad-mission-blurb">
+      <p>Hey. We're SadFunction. We do podcasts about things like video games and mechanics behind them. We also frequently talk about anything that may interest us at the time, so don't expect things to be strictly games. We also talk about music, movies, comic books, and a slew of other stuff.</p>
+    </div>
+    <div class="sad-sub-links">
+      <p>If you want to follow us, check us out on Twitter, SoundCloud, or other places we decide to be.</p>
+      <a href="https://twitter.com/sadfunction"><img src="res/img/Twitter_Logo_Blue.svg" style="width: 64px; height: 64px; margin-right: 5px;"></a>
+      <iframe allowtransparency="true" scrolling="no" frameborder="no" src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fsadfunction&color=orange_transparent&size=64" style="width: 64px; height: 64px;"></iframe>
+    </div>
+    <div class="sad-hr"></div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+    <div class="sad-article-blurb">
+      <h2>Here's an article</h2>
+      <p>Here's a bunch of shit text to emulate the first paragraph of an article. Maybe we talk about how much we love boobies or how much we love pooty tang. Who knows, bitch.</p>
+    </div>
+  </div>
+<footer>
+  <div class="sad-footy">
+    <div class="left">
+      &#169; SadFunction 2017
+    </div>
+    <div class="right">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Podcasts</a></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function expandNav(){
+  if (document.getElementById("sad-nav").className != "responsive"){
+    document.getElementById("sad-nav").className += "responsive";
+    document.getElementById("sad-menu").className += "responsive";
+    document.getElementById("sad-responsive-nav").className += "responsive";
+  } else {
+    document.getElementById("sad-nav").className = "";
+    document.getElementById("sad-menu").className = "";
+    document.getElementById("sad-responsive-nav").className = "";
+  }
+}
+</script>
+
+</body>
+</html>

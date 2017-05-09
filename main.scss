@@ -1,0 +1,358 @@
+// variables
+
+//measurements
+$gutter-size: 1em;
+
+//colors
+$main-blue: #001DC4;
+$dark-blue: #000C51;
+$lite-blue: #778BFF;
+$grey-blue: #23395B;
+$dark-grey: #161925;
+$lite-grey: #E7E7E7;
+
+//mixins
+@mixin clearfix{
+	&:after{
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+/* presets */
+
+html{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: 'Droid Sans', sans-serif;
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	height: 100%;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+}
+
+footer{
+	background: $dark-blue;
+	color: $lite-grey;
+	padding : {
+		top: 2em;
+		bottom: 1em;
+	}
+	.sad-footy{
+		@include clearfix;
+		max-width: 71.25em;
+		margin : {
+			left: auto;
+			right: auto;
+		}
+		font-size: 10pt;
+		.left{
+			width: calc(50% - #{$gutter-size});
+			float: left;
+			margin : {
+				left: calc(#{$gutter-size} / 2);
+				right: calc(#{$gutter-size} / 2);
+			}
+			padding : {
+				right: 1em;
+			}
+			text-align: right;
+		}
+		.right{
+			width: calc(50% - #{$gutter-size});
+			float: left;
+			margin : {
+				left: calc(#{$gutter-size} / 2);
+				right: calc(#{$gutter-size} / 2);
+			}ul{
+				text-align: left;
+				padding : {
+					left: 0;
+					top: 0;
+				}
+				margin : {
+					left: 0;
+					top: 0;
+				}
+				list-style: none;
+				li{
+					margin : {
+						left: 0;
+						bottom: .5em;
+					}
+					a{
+						text-decoration: none;
+						color: $lite-grey;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* media queries */
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	#sad-menu ul a {display: none;}
+	#sad-brand{display: none;}
+	#sad-menu a#sad-burger-menu{
+		float: right;
+		display: block;
+		padding: {
+			top: 1em;
+			left: 1em;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	#sad-nav.responsive{
+		height: auto;
+	}
+	#sad-menu.responsive{
+		height: auto;
+	}
+	#sad-menu ul.responsive {
+		position: relative;
+		display: block;
+		float: left;
+		a#sad-burger-menu {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		a {
+			float: none;
+			display: block;
+			li{
+				text-align: center;
+				width: 100%;
+				border: none;
+				padding : {
+					bottom: 1.25em;
+				}
+			}
+			li:hover{
+				border: none;
+			}
+			li.selected{
+				border: none;
+			}
+		}
+	}
+}
+
+/* sad nav */
+
+#sad-nav{
+	width: 100%;
+	height: 4em;
+	background-color: $grey-blue;
+	color: #FFF;
+	position: fixed;
+	margin:0;
+	left: 0;
+	top: 0;
+	box-shadow: 0 1px 20px #000;
+	z-index: 10;
+}
+
+#sad-menu{
+	@include clearfix;
+	width: 85%;
+	height: 4em;
+	margin: 0 auto;
+	ul{
+		padding: 0;
+		margin: 0;
+		float: right;
+		height: 100%;		
+		li{
+			float: left;
+			height: 100%;
+			padding: {
+				top: 1.5em;
+				left: 1em;
+				right: 1em;
+			}
+			text-transform: uppercase;
+			display: inline-block;
+			font : {
+				weight: bold;
+			}
+		}
+		li:hover{
+			border : {
+				bottom: 5px solid #FFF;
+			}
+		}
+		li.selected{
+			border : {
+				bottom: 5px solid #FFF;
+			}
+		}
+	}
+	a{
+		text-decoration: none;
+		color: #FFF;
+	}
+}
+
+#sad-burger-menu{
+	display: none;
+}
+
+#sad-brand{
+	height: 4em;
+	width: 4em;
+	float: left;
+	-ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    padding : {
+    	left: 1em
+    }
+    vertical-align: middle;
+}
+
+/* page elements */
+.sad-hero{
+	width: 100%;
+	background-color: $main-blue;
+	color: #FFF;
+	text-align: center;
+	margin : {
+		bottom: 1em;
+	}
+	padding : {
+		top: 4em;
+		bottom: 2em;
+	}
+	font : {
+		weight: bold;
+		size: 36pt
+	}
+	p{
+		font : {
+			weight: 400;
+			size: 16pt;
+		}
+	}
+}
+
+.sad-container{
+	@include clearfix;
+	max-width: 71.25em;
+	min-height: 100%;
+	margin : {
+		right: auto;
+		left: auto;
+	}
+	padding : {
+		top: 2em;
+		bottom: 7em;
+	}
+}
+
+.sad-mission-blurb{
+	@media only screen and (min-width: 700px){
+		width: 100%
+	}
+	@media only screen and (min-width: 767px){
+		width: calc(60% - #{$gutter-size});
+	}
+	float: left;
+	margin : {
+		bottom: 4em;
+		top: 2em;
+		left: calc(#{$gutter-size} / 2);
+		right: calc(#{$gutter-size} / 2);
+	}
+	p{
+		padding : {
+			left: 1em;
+			right: 1em;
+		}
+		margin: 0;
+		text : {
+			transform: uppercase;
+			
+		}
+		color: $dark-grey;
+		font-family: 'Nunito', sans-serif;
+	}
+}
+
+.sad-sub-links{
+	@media only screen and (min-width: 700px){
+		width: 100%
+	}
+	@media only screen and (min-width: 767px){
+		width: calc(40% - #{$gutter-size});
+	}
+	float: left;
+	margin : {
+		bottom: 4em;
+		top: 2em;
+		left: calc(#{$gutter-size} / 2);
+		right: calc(#{$gutter-size} / 2);
+	}
+	text : {
+		align: center;
+	}
+	color: $dark-grey;
+	p{
+		padding : {
+			bottom: 1em;
+		}
+		margin: 0;
+		line-height: 1.5em;
+	}
+}
+
+.sad-article-blurb{
+	@media only screen and (min-width: 767px){
+		width: 100%;
+	}
+	@media only screen and (min-width: 900px){
+		width: calc(50% - #{$gutter-size});
+	}
+	@media only screen and (min-width: 1200px){
+		width: calc(33% - #{$gutter-size});
+	}
+	float: left;
+	padding : {
+		top: 2em;
+		right: 3em;
+		left: 3em;
+		bottom: 4em;
+	}
+	margin : {
+		top: 3em;
+		left: calc(#{$gutter-size} / 2);
+		right: calc(#{$gutter-size} / 2);
+	}
+	background: $lite-grey;
+	border-radius: 5px;
+}
+
+.sad-hr{
+	height: 1px;
+	width: 80%;
+	float: left;
+	margin : {
+		left: 10%;
+		right: 10%;
+	}
+	background: $lite-grey;
+}
