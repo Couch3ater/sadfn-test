@@ -250,16 +250,25 @@ footer{
 	}
 }
 
-.sad-container{
+.sad-container, .sad-article-blurb-wrap{
 	@include clearfix;
 	max-width: 71.25em;
-	min-height: 100%;
 	margin : {
 		right: auto;
 		left: auto;
 	}
+}
+
+.sad-container{
 	padding : {
 		top: 2em;
+		bottom: 0
+	}
+}
+
+.sad-article-blurb-wrap{
+	padding : {
+		top: 0;
 		bottom: 7em;
 	}
 }
@@ -273,8 +282,6 @@ footer{
 	}
 	float: left;
 	margin : {
-		bottom: 4em;
-		top: 2em;
 		left: calc(#{$gutter-size} / 2);
 		right: calc(#{$gutter-size} / 2);
 	}

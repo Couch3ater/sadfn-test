@@ -166,22 +166,25 @@ footer {
     font-weight: 400;
     font-size: 16pt; }
 
-.sad-container {
+.sad-container, .sad-article-blurb-wrap {
   max-width: 71.25em;
-  min-height: 100%;
   margin-right: auto;
-  margin-left: auto;
-  padding-top: 2em;
-  padding-bottom: 7em; }
-  .sad-container:after {
+  margin-left: auto; }
+  .sad-container:after, .sad-article-blurb-wrap:after {
     display: table;
     clear: both;
     content: ''; }
 
+.sad-container {
+  padding-top: 2em;
+  padding-bottom: 0; }
+
+.sad-article-blurb-wrap {
+  padding-top: 0;
+  padding-bottom: 7em; }
+
 .sad-mission-blurb {
   float: left;
-  margin-bottom: 4em;
-  margin-top: 2em;
   margin-left: calc(1em / 2);
   margin-right: calc(1em / 2); }
   @media only screen and (min-width: 700px) {
