@@ -87,7 +87,7 @@ footer {
       float: none;
       display: block; }
       #sad-menu ul.responsive a li {
-        text-align: center;
+        text-align: left;
         width: 100%;
         border: none;
         padding-bottom: 1.25em; }
