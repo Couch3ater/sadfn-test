@@ -210,7 +210,8 @@ footer {
   color: #161925; }
   @media only screen and (min-width: 700px) {
     .sad-sub-links {
-      width: 100%; } }
+      width: 100%;
+      margin-top: 2em; } }
   @media only screen and (min-width: 767px) {
     .sad-sub-links {
       width: calc(40% - 1em); } }
