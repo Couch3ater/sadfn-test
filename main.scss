@@ -310,7 +310,6 @@ footer{
 	float: left;
 	margin : {
 		bottom: 4em;
-		top: 2em;
 		left: calc(#{$gutter-size} / 2);
 		right: calc(#{$gutter-size} / 2);
 	}
@@ -345,7 +344,7 @@ footer{
 		bottom: 4em;
 	}
 	margin : {
-		top: 3em;
+		top: 1em;
 		left: calc(#{$gutter-size} / 2);
 		right: calc(#{$gutter-size} / 2);
 	}
@@ -360,6 +359,7 @@ footer{
 	margin : {
 		left: 10%;
 		right: 10%;
+		bottom: 2em;
 	}
 	background: $lite-grey;
 }
