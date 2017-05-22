@@ -274,10 +274,13 @@ footer{
 }
 
 .sad-mission-blurb{
-	@media only screen and (min-width: 700px){
-		width: 100%
+	@media only screen and (max-width: 767px){
+		width: 100%;
+		margin : {
+			bottom: 2em;
+		}
 	}
-	@media only screen and (min-width: 767px){
+	@media only screen and (min-width: 900px){
 		width: calc(60% - #{$gutter-size});
 	}
 	float: left;
@@ -301,13 +304,10 @@ footer{
 }
 
 .sad-sub-links{
-	@media only screen and (min-width: 700px){
+	@media only screen and (max-width: 767px){
 		width: 100%;
-		margin : {
-			top: 2em;
-		}
 	}
-	@media only screen and (min-width: 767px){
+	@media only screen and (min-width: 900px){
 		width: calc(40% - #{$gutter-size});
 	}
 	float: left;
@@ -365,4 +365,13 @@ footer{
 		bottom: 2em;
 	}
 	background: $lite-grey;
+}
+
+.sad-boxy-nav{
+	width: 100%;
+	height: 10em;
+	background: $dark-grey;
+	margin : {
+		bottom: 2em;
+	}
 }
